@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Hero = ({ title = "Super Hero Section", subtitle = "Super SubTitle Section" }) => {
     return (
         <section className="bg-indigo-700 py-20 mb-4">

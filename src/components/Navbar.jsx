@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
-import React from 'react'
 
 const Navbar = (props) => {
     const {
@@ -16,7 +16,7 @@ const Navbar = (props) => {
                         className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
                     >
                         {/* <!-- Logo --> */}
-                        <a className="flex flex-shrink-0 items-center mr-4" href="/index.html">
+                        <Link className="flex flex-shrink-0 items-center mr-4" to="/">
                             <img
                                 className="h-10 w-auto"
                                 src={logo}
@@ -25,24 +25,21 @@ const Navbar = (props) => {
                             <span className="hidden md:block text-white text-2xl font-bold ml-2"
                             >{logo_title}</span
                             >
-                        </a>
+                        </Link>
                         <div className="md:ml-auto">
                             <div className="flex space-x-2">
-                                <a
-                                    href="/index.html"
+                                <Link
+                                    to="/"
                                     className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_home_name}</a
-                                >
-                                <a
-                                    href="/jobs.html"
+                                >{button_home_name}</Link>
+                                <Link
+                                    to="/jobs"
                                     className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_jobs_name}</a
-                                >
-                                <a
-                                    href="/add-job.html"
+                                >{button_jobs_name}</Link>
+                                <Link
+                                    to="/add-job"
                                     className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_add_job_name}</a
-                                >
+                                >{button_add_job_name}</Link>
                             </div>
                         </div>
                     </div>
