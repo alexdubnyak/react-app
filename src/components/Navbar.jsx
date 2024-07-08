@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 
 const Navbar = (props) => {
+    const linkClass = ({ isActive }) => isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+
     const {
         button_home_name = "Casa",
         button_jobs_name = "Trabajos",
@@ -16,7 +18,7 @@ const Navbar = (props) => {
                         className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
                     >
                         {/* <!-- Logo --> */}
-                        <Link className="flex flex-shrink-0 items-center mr-4" to="/">
+                        <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
                             <img
                                 className="h-10 w-auto"
                                 src={logo}
@@ -25,21 +27,21 @@ const Navbar = (props) => {
                             <span className="hidden md:block text-white text-2xl font-bold ml-2"
                             >{logo_title}</span
                             >
-                        </Link>
+                        </NavLink>
                         <div className="md:ml-auto">
                             <div className="flex space-x-2">
-                                <Link
+                                <NavLink
                                     to="/"
-                                    className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_home_name}</Link>
-                                <Link
+                                    className={linkClass}
+                                >{button_home_name}</NavLink>
+                                <NavLink
                                     to="/jobs"
-                                    className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_jobs_name}</Link>
-                                <Link
+                                    className={linkClass}
+                                >{button_jobs_name}</NavLink>
+                                <NavLink
                                     to="/add-job"
-                                    className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                                >{button_add_job_name}</Link>
+                                    className={linkClass}
+                                >{button_add_job_name}</NavLink>
                             </div>
                         </div>
                     </div>
