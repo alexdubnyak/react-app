@@ -1,0 +1,16 @@
+{
+    // тут что-то было уже до этого
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "git.ignoreMissingGitWarning": true,
+    "files.autoSave": "onWindowChange"
+  }
+  
